@@ -3,7 +3,7 @@ FROM python:3.7
 
 # variable de entorno que usamos para un troubleshooting.
 ENV PYTHONUNBUFFERED=1
-ENV PYTHONDONTWRITEBYTECODE=1
+
 
 # nos posicionamos en el directorio /backend.
 WORKDIR /backend
