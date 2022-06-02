@@ -16,7 +16,5 @@ jobs:
       with:
         context: ./Parte 3
         file: ./Parte 3/Dockerfile        
-        tag_with_ref: true
-        tag_with_sha: true
         tags: ${{ github.sha }}
  
