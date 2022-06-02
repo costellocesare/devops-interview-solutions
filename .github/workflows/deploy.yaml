@@ -9,6 +9,7 @@ jobs:
     - name: build and push to docker
       uses: docker/build-push-action@v1
       with:
+        path: Parte 3/Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         tag_with_ref: true
