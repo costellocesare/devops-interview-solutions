@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:10.1
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    networks:
+      - network1
+
+  backend:
+    container_name: backend
+    build: ./backend
+    command: python ./manage.py runserver 0.0.0.0:8000
+    ports:
+          - "8000:8000"
+    depends_on:
+          - db
+    environment:
+          - SECRET_KEY="MANGO"
+      # volumes: ./backend
+    networks:
+      - network1
+
+  frontend:
+    container_name: frontend
+    build: ./frontend
+    command: npm run start
+    ports:
+      - 3000:3000
+    networks:
+      - network1
+
+networks:
+  network1:
