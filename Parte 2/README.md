@@ -65,8 +65,7 @@ se copian los archivos del proyecto a la instancia EC2
 
 una vez todo configurado y los archivos copiados se corren los comandos 
 
-``  
- sudo yum update
+`` sudo yum update
 
  sudo yum install docker
 
