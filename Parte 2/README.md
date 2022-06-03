@@ -65,19 +65,20 @@ se copian los archivos del proyecto a la instancia EC2
 
 una vez todo configurado y los archivos copiados se corren los comandos 
 
-``  sudo yum update
+``  
+ sudo yum update
 
-    sudo yum install docker
+ sudo yum install docker
 
-    sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname-s)-$(uname -m)" -o /usr/local/bin/docker-compose
+ sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname-s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
-    sudo chmod +x /usr/local/bin/docker-compose
+ sudo chmod +x /usr/local/bin/docker-compose
 
-  sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose ``
+ sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose ``
 
 para iniciar el servicio de docker 
 
-`` sudo service docker start ``
+ `` sudo service docker start ``
 
 y luego desplegar los contenedores 
 
